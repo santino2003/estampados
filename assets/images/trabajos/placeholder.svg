@@ -1,0 +1,6 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#667eea"/>
+  <text x="50%" y="45%" text-anchor="middle" fill="white" font-size="24" font-family="Arial">Estampados Cande</text>
+  <text x="50%" y="55%" text-anchor="middle" fill="white" font-size="18" font-family="Arial">Imagen de muestra</text>
+  <text x="50%" y="65%" text-anchor="middle" fill="white" font-size="14" font-family="Arial">Reemplazar con foto real</text>
+</svg>

@@ -1,0 +1,46 @@
+[
+    {
+        "id": "dtf",
+        "titulo": "DTF",
+        "descripcionCorta": "Trabajos realizados con técnica DTF",
+        "descripcionCompleta": "Galería de trabajos realizados con la técnica DTF (Direct to Film). Ideal para diseños con muchos colores y detalles, ofreciendo colores vibrantes y gran durabilidad.",
+        "galeria": [
+            "assets/images/trabajos/dtf1.jpeg",
+            "assets/images/trabajos/dtf2.jpeg",
+            "assets/images/trabajos/dtf3.jpeg",
+            "assets/images/trabajos/dtf4.jpeg",
+            "assets/images/trabajos/dtf5.jpeg",
+            "assets/images/trabajos/dtf6.jpeg",
+            "assets/images/trabajos/dtf7.jpeg"
+        ]
+    },
+    {
+        "id": "bordado",
+        "titulo": "Bordado",
+        "descripcionCorta": "Trabajos de bordado personalizado",
+        "descripcionCompleta": "Galería de trabajos de bordado. Técnica tradicional que ofrece elegancia y durabilidad. Ideal para logos empresariales y diseños con terminación premium.",
+        "galeria": [
+            "assets/images/trabajos/bor2.jpeg",
+            "assets/images/trabajos/bor3.jpeg",
+            "assets/images/trabajos/bor4.jpeg",
+            "assets/images/trabajos/bor7.jpeg",
+            "assets/images/trabajos/bor8.jpeg"
+        ]
+    },
+    {
+        "id": "estampado",
+        "titulo": "Estampado",
+        "descripcionCorta": "Trabajos de estampado tradicional",
+        "descripcionCompleta": "Galería de trabajos de estampado. Técnica versátil para todo tipo de diseños, perfecta para grandes cantidades y excelente relación calidad-precio.",
+        "galeria": [
+            "assets/images/trabajos/est1.jpeg",
+            "assets/images/trabajos/est2.jpeg",
+            "assets/images/trabajos/est3.jpeg",
+            "assets/images/trabajos/est4.jpeg",
+            "assets/images/trabajos/est5.jpeg",
+            "assets/images/trabajos/est6.jpeg",
+            "assets/images/trabajos/est7.jpeg",
+            "assets/images/trabajos/est8.jpeg"
+        ]
+    }
+]
