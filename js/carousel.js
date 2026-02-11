@@ -5,8 +5,7 @@ class Carousel {
         this.track = document.querySelector('.carousel-track');
         this.prevBtn = document.querySelector('.carousel-btn-prev');
         this.nextBtn = document.querySelector('.carousel-btn-next');
-        this.currentPosition = 0;
-        this.cardWidth = 374; // 350px + 24px gap
+        this.currentIndex = 0;
         
         this.init();
     }
@@ -33,11 +32,14 @@ class Carousel {
     
     renderTrabajos(trabajos) {
         this.track.innerHTML = '';
+        this.totalCards = trabajos.length;
         
         trabajos.forEach(trabajo => {
             const card = this.createCard(trabajo);
             this.track.appendChild(card);
         });
+        
+        this.updatePosition();
     }
     
     createCard(trabajo) {
@@ -73,18 +75,43 @@ class Carousel {
     }
     
     next() {
-        const maxScroll = this.track.scrollWidth - this.track.parentElement.offsetWidth;
-        this.currentPosition = Math.min(this.currentPosition + this.cardWidth, maxScroll);
-        this.updatePosition();
+        if (this.currentIndex < this.totalCards - 1) {
+            this.currentIndex++;
+            this.updatePosition();
+        }
     }
     
     prev() {
-        this.currentPosition = Math.max(this.currentPosition - this.cardWidth, 0);
-        this.updatePosition();
+        if (this.currentIndex > 0) {
+            this.currentIndex--;
+            this.updatePosition();
+        }
     }
     
     updatePosition() {
-        this.track.style.transform = `translateX(-${this.currentPosition}px)`;
+        const cards = this.track.querySelectorAll('.trabajo-card');
+        if (cards.length === 0) return;
+        
+        const containerWidth = this.track.parentElement.offsetWidth;
+        const cardWidth = cards[0].offsetWidth;
+        const gap = 32; // 2rem gap
+        
+        // En desktop (más de 992px) no mover el carrusel
+        if (window.innerWidth > 992) {
+            this.track.style.transform = 'translateX(0)';
+            return;
+        }
+        
+        // En móvil/tablet, calcular posición para centrar la tarjeta actual
+        // Solo aplicar offset si hay espacio (containerWidth > cardWidth)
+        let offset = 0;
+        if (containerWidth > cardWidth) {
+            offset = (containerWidth - cardWidth) / 2;
+        }
+        
+        const position = -(this.currentIndex * (cardWidth + gap)) + offset;
+        
+        this.track.style.transform = `translateX(${position}px)`;
     }
 }
 

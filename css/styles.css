@@ -201,27 +201,38 @@ html {
 
 /* Sección Trabajos mejorada */
 #trabajos {
-    min-height: 100vh;
+    min-height: auto;
 }
 
 /* Carrusel mejorado */
 .carousel-container {
     position: relative;
     padding: 0 60px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .carousel-wrapper {
     overflow: hidden;
+    width: 100%;
 }
 
 .carousel-track {
     display: flex;
     transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    gap: 1.5rem;
+    gap: 2rem;
+}
+
+/* En desktop centrar las tarjetas */
+@media (min-width: 993px) {
+    .carousel-track {
+        justify-content: center;
+    }
 }
 
 .trabajo-card {
     min-width: 350px;
+    max-width: 350px;
     flex-shrink: 0;
     cursor: pointer;
     border-radius: 20px;
@@ -300,6 +311,13 @@ html {
     align-items: center;
     justify-content: center;
     box-shadow: 0 4px 12px rgba(167, 139, 250, 0.3);
+}
+
+/* Ocultar botones en desktop */
+@media (min-width: 993px) {
+    .carousel-btn {
+        display: none;
+    }
 }
 
 .carousel-btn:hover {
@@ -520,19 +538,45 @@ a .contacto-card {
 @media (max-width: 768px) {
     .carousel-container {
         padding: 0 50px;
+        max-width: 400px;
     }
     
     .carousel-track {
-        gap: 1rem;
+        gap: 1.5rem;
     }
     
     .trabajo-card {
         min-width: 280px;
+        max-width: 280px;
+    }
+    
+    .trabajo-card-icon {
+        padding: 2.5rem 0 !important;
+    }
+    
+    .trabajo-card-icon i {
+        font-size: 3rem !important;
+    }
+    
+    .trabajo-card-info {
+        padding: 1rem;
+    }
+    
+    .trabajo-card-info h3 {
+        font-size: 1.1rem;
+    }
+    
+    .trabajo-card-info p {
+        font-size: 0.9rem;
     }
     
     .carousel-btn {
-        width: 40px;
-        height: 40px;
+        width: 35px;
+        height: 35px;
+    }
+    
+    .carousel-btn i {
+        font-size: 1rem;
     }
     
     #hero h1 {
@@ -582,15 +626,70 @@ a .contacto-card {
         font-size: 1rem !important;
         padding: 0.75rem 2rem !important;
     }
+    
+    /* Reducir espaciado entre secciones en móvil */
+    section {
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+    }
+    
+    #trabajos {
+        padding-bottom: 0.5rem !important;
+    }
+    
+    #hero {
+        padding-top: 80px !important;
+        min-height: auto !important;
+    }
+    
+    .carousel-container {
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    
+    #trabajos .container {
+        padding-bottom: 0 !important;
+    }
 }
 
 @media (max-width: 576px) {
     .carousel-container {
         padding: 0 40px;
+        max-width: 350px;
     }
     
     .trabajo-card {
-        min-width: 250px;
+        min-width: 260px;
+        max-width: 260px;
+    }
+    
+    .trabajo-card-icon {
+        padding: 2rem 0 !important;
+    }
+    
+    .trabajo-card-icon i {
+        font-size: 2.5rem !important;
+    }
+    
+    .trabajo-card-info {
+        padding: 0.75rem;
+    }
+    
+    .trabajo-card-info h3 {
+        font-size: 1rem;
+    }
+    
+    .trabajo-card-info p {
+        font-size: 0.85rem;
+    }
+    
+    .carousel-btn {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .carousel-btn i {
+        font-size: 0.9rem;
     }
     
     .contacto-card {
@@ -633,6 +732,31 @@ a .contacto-card {
     .badge-hero {
         font-size: 0.8rem;
         padding: 0.6rem 1.2rem;
+    }
+    
+    /* Reducir espaciado adicional en pantallas muy pequeñas */
+    section {
+        padding-top: 0.75rem !important;
+        padding-bottom: 0.75rem !important;
+    }
+    
+    #trabajos {
+        padding-top: 1rem !important;
+        padding-bottom: 0.25rem !important;
+    }
+    
+    .text-center.mb-5 {
+        margin-bottom: 1rem !important;
+    }
+    
+    #trabajos .text-center {
+        margin-bottom: 0.75rem !important;
+    }
+    
+    .carousel-container {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        margin-bottom: 0 !important;
     }
 }
 
